@@ -1,0 +1,176 @@
+*{
+			box-sizing: border-box;
+
+		}
+		body{
+			margin: 0;
+		}
+		.header{
+				background-color: #f1f1f1;
+				padding: 20px;
+				text-align: center;
+				color: #c3aa3c;
+		}
+		img{
+			height: 50px;
+			width: 75px;
+			float: left;
+			margin-top: 15px;
+		}
+		.topnav{
+			overflow: hidden;
+			background-color: #444;
+		}
+		.topnav a{
+			float:left;
+			display: block;
+			color: #f2f2f2;
+			text-align: center;
+			padding: 14px 16px;
+			text-decoration: none;
+		}
+		.topnav	a:hover{
+			background-color: #f4f4f4;
+			color: black;
+		}
+		.container{
+			background-image: url("..\ecom\images\cart.jpeg");
+			height:500px;
+			width: 800px;
+		}
+		.container img{
+			height:500px;
+			width: 800px;
+		}
+		.footer{
+			background-color: #f1f1f1;
+			padding: 20px;
+			text-align: center;
+		}
+		div.reglabel{
+				padding: 12px 12px 12px 0;
+				display:inline-block;
+		}
+		div.regcontainer{
+			border-radius: 	5px;
+			background-color: #f2f2f2;
+			padding: 20px;
+		}
+		div.regcol-25{
+
+			float: left;
+			width: 25%;
+			margin-top: 6px;
+		}
+		div.regcol-75{
+
+			float: left;
+			width: 75%;
+			margin-top: 6px;
+		}
+		div.regrow:after{
+
+				content: "";
+				display: table;
+				clear: both;
+
+		}
+		div.regsub{
+			align-content: center;
+		}
+		div.regse input[type=text],select,textarea{
+			width: 32%;
+			padding: 12px 12px 12px 0;
+			border: 1px solid #ccc;
+			border-radius: 4px;
+			resize: vertical;
+		}
+		div.gflex-container{
+
+			display: flex;
+			height: 600px;
+			flex-wrap: wrap;
+			align-content: stretch;
+			overflow: scroll;
+			background-color: #f7f7f7;
+		}
+
+		.gflex-container > div{
+
+			background-color: #f2f2f2;
+			width: 200px;
+			margin:20px;
+			line-height:75px;
+			align-content: center;
+			font-size: 20px;
+		}
+
+		.gimg{
+
+			height:200;
+			width:150;
+		}
+		*{
+			box-sizing: border-box;
+
+		}
+		body{
+			margin: 0;
+		}
+		.header{
+				background-color: #000000;
+				padding: 20px;
+				text-align: center;
+				color: #ffffff;
+		}
+		img{
+			height: 50px;
+			width: 75px;
+			float: left;
+			margin-top: 15px;
+		}
+		.topnav{
+			overflow: hidden;
+			background-color: #444;
+		}	
+		.topnav a{
+			float:left;
+			display: block;
+			color: #f2f2f2;
+			text-align: center;
+			padding: 14px 16px;
+			text-decoration: none;
+		}
+		.topnav	a:hover{
+			background-color: #f4f4f4;
+			color: black;
+		}
+		.container{
+			background-image: url("..\ecom\images\cart.jpeg");
+			height:500px;
+			width: 800px;
+		}
+		.container img{
+			height:500px;
+			width: 800px;
+		}
+		.footer{
+			background-color: #f1f1f1;
+			padding: 20px;
+			text-align: center;
+		}
+		.column{
+			float: left;
+			width:33.33%;
+			padding: 15px;
+		}
+		.carousel slide
+		{
+			position: relative;
+		}
+		.carousel-inner
+		{
+			position: relative;
+			width:100%;overflow:hidden;
+		}
+		
