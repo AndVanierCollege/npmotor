@@ -1,176 +1,381 @@
-*{
-			box-sizing: border-box;
+/* General Reset */
+* {
+    box-sizing: border-box;
+}
 
-		}
-		body{
-			margin: 0;
-		}
-		.header{
-				background-color: #f1f1f1;
-				padding: 20px;
-				text-align: center;
-				color: #c3aa3c;
-		}
-		img{
-			height: 50px;
-			width: 75px;
-			float: left;
-			margin-top: 15px;
-		}
-		.topnav{
-			overflow: hidden;
-			background-color: #444;
-		}
-		.topnav a{
-			float:left;
-			display: block;
-			color: #f2f2f2;
-			text-align: center;
-			padding: 14px 16px;
-			text-decoration: none;
-		}
-		.topnav	a:hover{
-			background-color: #f4f4f4;
-			color: black;
-		}
-		.container{
-			background-image: url("..\ecom\images\cart.jpeg");
-			height:500px;
-			width: 800px;
-		}
-		.container img{
-			height:500px;
-			width: 800px;
-		}
-		.footer{
-			background-color: #f1f1f1;
-			padding: 20px;
-			text-align: center;
-		}
-		div.reglabel{
-				padding: 12px 12px 12px 0;
-				display:inline-block;
-		}
-		div.regcontainer{
-			border-radius: 	5px;
-			background-color: #f2f2f2;
-			padding: 20px;
-		}
-		div.regcol-25{
+body {
+    margin: 0;
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh; /* Ensure the body takes up at least the full height of the viewport */
+}
 
-			float: left;
-			width: 25%;
-			margin-top: 6px;
-		}
-		div.regcol-75{
+/* Header */
+.header {
+    background-color: #000000;
+    padding: 20px;
+    text-align: center;
+    color: #ffffff;
+	position: relative; /* Added position relative */
+}
 
-			float: left;
-			width: 75%;
-			margin-top: 6px;
-		}
-		div.regrow:after{
+.header img {
+    height: 50px;
+    width: 75px;
+    float: left;
+    margin-top: 15px;
+}
 
-				content: "";
-				display: table;
-				clear: both;
+/* Navigation styles */
+.topnav {
+    background-color: #444;
+    overflow: hidden;
+}
 
-		}
-		div.regsub{
-			align-content: center;
-		}
-		div.regse input[type=text],select,textarea{
-			width: 32%;
-			padding: 12px 12px 12px 0;
-			border: 1px solid #ccc;
-			border-radius: 4px;
-			resize: vertical;
-		}
-		div.gflex-container{
+.topnav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
 
-			display: flex;
-			height: 600px;
-			flex-wrap: wrap;
-			align-content: stretch;
-			overflow: scroll;
-			background-color: #f7f7f7;
-		}
+.topnav li {
+    float: left;
+}
 
-		.gflex-container > div{
+.topnav a {
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
 
-			background-color: #f2f2f2;
-			width: 200px;
-			margin:20px;
-			line-height:75px;
-			align-content: center;
-			font-size: 20px;
-		}
+.topnav a:hover {
+    background-color: #f4f4f4;
+    color: black;
+}
 
-		.gimg{
+.submenu {
+    display: none;
+    position: absolute;
+    background-color: #444;
+    min-width: 160px;
+    z-index: 1;
+}
 
-			height:200;
-			width:150;
-		}
-		*{
-			box-sizing: border-box;
+.submenu a {
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
 
-		}
-		body{
-			margin: 0;
-		}
-		.header{
-				background-color: #000000;
-				padding: 20px;
-				text-align: center;
-				color: #ffffff;
-		}
-		img{
-			height: 50px;
-			width: 75px;
-			float: left;
-			margin-top: 15px;
-		}
-		.topnav{
-			overflow: hidden;
-			background-color: #444;
-		}	
-		.topnav a{
-			float:left;
-			display: block;
-			color: #f2f2f2;
-			text-align: center;
-			padding: 14px 16px;
-			text-decoration: none;
-		}
-		.topnav	a:hover{
-			background-color: #f4f4f4;
-			color: black;
-		}
-		.container{
-			background-image: url("..\ecom\images\cart.jpeg");
-			height:500px;
-			width: 800px;
-		}
-		.container img{
-			height:500px;
-			width: 800px;
-		}
-		.footer{
-			background-color: #f1f1f1;
-			padding: 20px;
-			text-align: center;
-		}
-		.column{
-			float: left;
-			width:33.33%;
-			padding: 15px;
-		}
-		.carousel slide
-		{
-			position: relative;
-		}
-		.carousel-inner
-		{
-			position: relative;
-			width:100%;overflow:hidden;
-		}
-		
+.submenu a:hover {
+    background-color: #f4f4f4;
+    color: black;
+}
+
+li:hover .submenu {
+    display: block;
+}
+
+/* Main Container */
+.container {
+    background-image: url("..\ecom\images\cart.jpeg"); /*Error: no image*/
+    height: 500px;
+    width: 800px;
+	flex: 1; /* Allow the container to grow and fill available space */
+	flex-wrap: nowrap;
+}
+
+.container img {
+    height: 500px;
+    width: 800px;
+}
+
+/* Footer */
+.footer {
+    background-color: #f1f1f1;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Registration Form */
+.reglabel {
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+}
+
+.regcontainer {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+
+.regcol-25 {
+    float: left;
+    width: 25%;
+    margin-top: 6px;
+}
+
+.regcol-75 {
+    float: left;
+    width: 75%;
+    margin-top: 6px;
+}
+
+.regrow:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.regsub {
+    align-content: center;
+}
+
+.regse input[type=text], select, textarea {
+    width: 32%;
+    padding: 12px 12px 12px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+}
+
+/* Flex Container for Gallery */
+.gflex-container {
+    display: flex;
+    height: 600px;
+    flex-wrap: wrap;
+    align-content: stretch;
+    overflow: scroll;
+    background-color: #f7f7f7;
+}
+
+.gflex-container > div {
+    background-color: #f2f2f2;
+    width: 200px;
+    margin: 20px;
+    line-height: 75px;
+    align-content: center;
+    font-size: 20px;
+}
+
+.gimg {
+    height: 200px;
+    width: 150px;
+}
+
+/* Column Layout */
+.column {
+    float: left;
+    width: 33.33%;
+    padding: 15px;
+}
+
+/* Carousel */
+.carousel-slide {
+    position: relative;
+}
+
+.carousel-inner {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.regform {
+	height: 470px;
+}
+.row.g-3 {
+	height: 600px;
+}
+
+
+/* Specific Styles for Price Page */
+.card-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+	gap: 20px;
+	padding: 20px;
+}
+
+.card {
+	background-color: #fff;
+	border: 1px solid #ddd;
+	border-radius: 10px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	overflow: hidden;
+	transition: transform 0.2s;
+}
+.card:hover {
+	transform: translateY(-5px);
+}
+.card img {
+	width: 100%;
+	height: 150px;
+	object-fit: cover;
+}
+.card-body {
+	padding: 15px;
+}
+.card-title {
+	font-size: 1.2em;
+	margin: 0;
+}
+.card-text {
+	color: #777;
+	margin: 10px 0;
+}
+.card-footer {
+	padding: 10px 15px;
+	background-color: #f9f9f9;
+	border-top: 1px solid #ddd;
+	text-align: center;
+}
+
+/* Specific Styles for Main(Home) Page */
+.feature-section {
+	padding: 40px 20px;
+}
+.feature {
+	text-align: center;
+	padding: 20px;
+}
+.feature img {
+	width: 100px;
+	height: 100px;
+	margin-bottom: 20px;
+}
+.service-section {
+	background-color: #f8f9fa;
+	padding: 40px 20px;
+}
+.service {
+	text-align: center;
+	padding: 20px;
+}
+.service img {
+	width: 100px;
+	height: 100px;
+	margin-bottom: 20px;
+}
+
+/* Specific Styles for admin profile Page */
+.main-container {
+	display: flex;
+	flex: 1;
+}
+
+.sidebar {
+	width: 240px;
+	background-color: #444;
+	padding-top: 20px;
+}
+
+.sidebar a {
+	padding: 10px 15px;
+	text-decoration: none;
+	font-size: 18px;
+	color: white;
+	display: block;
+}
+
+.sidebar a:hover {
+	background-color: #575757;
+}
+
+.content {
+	display: flex;
+	width: 75%;
+	padding: 20px;
+}
+
+.center {
+	flex: 1;
+	padding: 20px;
+}
+
+.right {
+	width: 240px;
+	padding: 20px;
+}
+
+.stats-box {
+	display: flex;
+	justify-content: space-around;
+	margin-top: 20px;
+}
+
+.stats-box .card {
+	width: 30%;
+}
+
+.recent-activities {
+	margin-top: 40px;
+}
+
+.recent-activities .card {
+	margin-bottom: 20px;
+}
+
+/* Specific Styles for About Us Page */
+.about-header {
+	background-color: #007bff;
+	color: white;
+	padding: 50px 0;
+	text-align: center;
+}
+
+.about-header h1 {
+	margin-bottom: 10px;
+	font-size: 2.5rem;
+}
+
+.about-header p {
+	font-size: 1.2rem;
+}
+
+.about-section {
+	padding: 50px 0;
+}
+
+.about-section h3 {
+	margin-bottom: 20px;
+	font-size: 1.75rem;
+}
+
+.about-section p {
+	font-size: 1rem;
+	line-height: 1.6;
+}
+/* Specific Styles for Service Page */
+.service-header {
+	background-color: #007bff;
+	color: white;
+	padding: 50px 0;
+	text-align: center;
+}
+
+.service-header h1 {
+	margin-bottom: 10px;
+	font-size: 2.5rem;
+}
+
+.service-header p {
+	font-size: 1.2rem;
+}
+
+.service-section {
+	padding: 50px 0;
+}
+
+.service-section h3 {
+	margin-bottom: 20px;
+	font-size: 1.75rem;
+}
+
+.service-section p {
+	font-size: 1rem;
+	line-height: 1.6;
+}

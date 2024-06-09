@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Make an Appointment | N P Motors</title>
+    <title>Moderate Appointment Requests | N P Motors</title>
     <link rel="icon" type="image/x-icon" href="./images/npf.png">
     <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="indexstyle.css" type="text/css">
@@ -13,7 +13,7 @@
         .container {
             padding: 40px;
         }
-		.card:hover {
+        .card:hover {
             transform: none;
             /* reset other hover effects*/
         }
@@ -58,11 +58,16 @@
 
     <main class="container">
         <div class="row justify-content-center">
-            <div class="col-md-6">
+            <div class="col-md-8">
                 <div class="card">
-                    <h2 class="card-title text-center">Make an Appointment</h2>
+                    <h2 class="card-title text-center">Moderate Appointment Requests</h2>
                     <div class="card-body">
-                        <form action="appoinsert.php" method="POST">
+                        <!-- Form for moderation -->
+                        <form action="moderate_appointments.php" method="POST">
+                            <div class="mb-3">
+                                <label for="requestId" class="form-label">Request ID</label>
+                                <input type="text" class="form-control" name="requestId" id="requestId" placeholder="Request ID">
+                            </div>
                             <div class="mb-3">
                                 <label for="uname" class="form-label">User Name</label>
                                 <input type="text" class="form-control" name="uname" id="uname" placeholder="User Name">
@@ -80,28 +85,37 @@
                                 <input type="number" class="form-control" name="mno" id="mno" placeholder="Mobile Number">
                             </div>
                             <div class="mb-3">
-                                <label for="date" class="form-label">Select Date</label>
-                                <input type="date" class="form-control" name="date" id="date" placeholder="Select Date Here">
+                                <label for="date" class="form-label">Requested Date</label>
+                                <input type="date" class="form-control" name="date" id="date" placeholder="Requested Date" >
                             </div>
                             <div class="mb-3">
-                                <label for="time" class="form-label">Select Your Time</label>
-                                <input type="time" class="form-control" name="time" id="time" placeholder="Select Your Time Here">
+                                <label for="time" class="form-label">Requested Time</label>
+                                <input type="time" class="form-control" name="time" id="time" placeholder="Requested Time">
                             </div>
                             <div class="mb-3">
-                                <label for="vehicle" class="form-label">Select Your Vehicle Type</label>
-                                <select class="form-select" name="vehicle" id="vehicle">
-                                    <option selected>--Select--</option>
-                                    <option>Class 1 - Heavy Vehicle</option>
-                                    <option>Class 2 - Bus</option>
-                                    <option>Class 3 - Truck</option>
-                                    <option>Class 4 - Emergency Vehicle</option>
-                                    <option>Class 5 - Automobile</option>
-                                    <option>Class 6 - 2 wheel & 3 Wheel</option>
-                                    <option>Class 8 - Tractor</option>
-                                </select>
+                                <label for="vehicle" class="form-label">Vehicle Type</label>
+                                <input type="text" class="form-control" name="vehicle" id="vehicle" placeholder="Vehicle Type">
                             </div>
+							<div class="mb-3">
+								<label for="confirmation" class="form-label">Confirmation requested by</label>
+								<div class="form-check">
+									<input class="form-check-input" type="radio" name="confirmation" id="confirmationEmail" value="email" checked>
+									<label class="form-check-label" for="confirmationEmail">Email</label>
+								</div>
+								<div class="form-check">
+									<input class="form-check-input" type="radio" name="confirmation" id="confirmationPhone" value="phone">
+									<label class="form-check-label" for="confirmationPhone">Phone call</label>
+								</div>
+							</div>
+							<div class="mb-3">
+								<div class="form-check">
+									<input class="form-check-input" type="checkbox" id="dataProcessing" name="dataProcessing" value="yes" required>
+									<label class="form-check-label" for="dataProcessing">I agree to the processing of my data for the handling of my appointment request.</label>
+								</div>
+							</div>
                             <div class="d-flex flex-row align-items-center justify-content-between">
-                                <button class="btn btn-success" name="submit" id="submit" style="margin-left: auto;">Submit an Appointment</button>
+                                <button class="btn btn-danger" name="reject" id="reject">Reject</button>
+                                <button class="btn btn-success" name="approve" id="approve" style="margin-left: auto;">Approve</button>
                             </div>
                         </form>
                     </div>
