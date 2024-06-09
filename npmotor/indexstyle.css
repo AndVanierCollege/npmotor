@@ -81,7 +81,7 @@ li:hover .submenu {
 
 /* Main Container */
 .container {
-    background-image: url("..\ecom\images\cart.jpeg");
+    background-image: url("..\ecom\images\cart.jpeg"); /*Error: no image*/
     height: 500px;
     width: 800px;
 	flex: 1; /* Allow the container to grow and fill available space */
@@ -189,4 +189,193 @@ li:hover .submenu {
 }
 .row.g-3 {
 	height: 600px;
+}
+
+
+/* Specific Styles for Price Page */
+.card-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+	gap: 20px;
+	padding: 20px;
+}
+
+.card {
+	background-color: #fff;
+	border: 1px solid #ddd;
+	border-radius: 10px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	overflow: hidden;
+	transition: transform 0.2s;
+}
+.card:hover {
+	transform: translateY(-5px);
+}
+.card img {
+	width: 100%;
+	height: 150px;
+	object-fit: cover;
+}
+.card-body {
+	padding: 15px;
+}
+.card-title {
+	font-size: 1.2em;
+	margin: 0;
+}
+.card-text {
+	color: #777;
+	margin: 10px 0;
+}
+.card-footer {
+	padding: 10px 15px;
+	background-color: #f9f9f9;
+	border-top: 1px solid #ddd;
+	text-align: center;
+}
+
+/* Specific Styles for Main(Home) Page */
+.feature-section {
+	padding: 40px 20px;
+}
+.feature {
+	text-align: center;
+	padding: 20px;
+}
+.feature img {
+	width: 100px;
+	height: 100px;
+	margin-bottom: 20px;
+}
+.service-section {
+	background-color: #f8f9fa;
+	padding: 40px 20px;
+}
+.service {
+	text-align: center;
+	padding: 20px;
+}
+.service img {
+	width: 100px;
+	height: 100px;
+	margin-bottom: 20px;
+}
+
+/* Specific Styles for admin profile Page */
+.main-container {
+	display: flex;
+	flex: 1;
+}
+
+.sidebar {
+	width: 240px;
+	background-color: #444;
+	padding-top: 20px;
+}
+
+.sidebar a {
+	padding: 10px 15px;
+	text-decoration: none;
+	font-size: 18px;
+	color: white;
+	display: block;
+}
+
+.sidebar a:hover {
+	background-color: #575757;
+}
+
+.content {
+	display: flex;
+	width: 75%;
+	padding: 20px;
+}
+
+.center {
+	flex: 1;
+	padding: 20px;
+}
+
+.right {
+	width: 240px;
+	padding: 20px;
+}
+
+.stats-box {
+	display: flex;
+	justify-content: space-around;
+	margin-top: 20px;
+}
+
+.stats-box .card {
+	width: 30%;
+}
+
+.recent-activities {
+	margin-top: 40px;
+}
+
+.recent-activities .card {
+	margin-bottom: 20px;
+}
+
+/* Specific Styles for About Us Page */
+.about-header {
+	background-color: #007bff;
+	color: white;
+	padding: 50px 0;
+	text-align: center;
+}
+
+.about-header h1 {
+	margin-bottom: 10px;
+	font-size: 2.5rem;
+}
+
+.about-header p {
+	font-size: 1.2rem;
+}
+
+.about-section {
+	padding: 50px 0;
+}
+
+.about-section h3 {
+	margin-bottom: 20px;
+	font-size: 1.75rem;
+}
+
+.about-section p {
+	font-size: 1rem;
+	line-height: 1.6;
+}
+/* Specific Styles for Service Page */
+.service-header {
+	background-color: #007bff;
+	color: white;
+	padding: 50px 0;
+	text-align: center;
+}
+
+.service-header h1 {
+	margin-bottom: 10px;
+	font-size: 2.5rem;
+}
+
+.service-header p {
+	font-size: 1.2rem;
+}
+
+.service-section {
+	padding: 50px 0;
+}
+
+.service-section h3 {
+	margin-bottom: 20px;
+	font-size: 1.75rem;
+}
+
+.service-section p {
+	font-size: 1rem;
+	line-height: 1.6;
 }
